@@ -23,7 +23,7 @@ l["copyright"]
 def write_js_meta(
     fn,
     meta,
-    url_base="https://siliconpr0n.org/lib/groupXIV/stable",
+    url_base="https://siliconprawn.org/lib/groupXIV/stable",
 ):
     assert len(meta["layers"]) == 1, len(meta["layers"])
     out = '''\
@@ -65,7 +65,7 @@ class GroupXIV:
         self.image = None
         # don't error on missing tiles in grid
         self.skip_missing = False
-        # GroupXIV default is 500, but pr0nmap was 250
+        # GroupXIV default is 500, but prawnmap was 250
         self.tile_size = 250
         self.js_only = False
 

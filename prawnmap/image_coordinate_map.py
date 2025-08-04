@@ -1,6 +1,6 @@
 import math
 import os
-from pr0nmap.pimage import PImage
+from prawnmap.pimage import PImage
 
 
 class MissingImage(Exception):

@@ -1,7 +1,7 @@
-from pr0nmap.pimage import PImage
-from pr0nmap import pimage
-from pr0nmap.tile import Tiler, calc_max_level
-from pr0nmap.image_coordinate_map import ImageCoordinateMap
+from prawnmap.pimage import PImage
+from prawnmap import pimage
+from prawnmap.tile import Tiler, calc_max_level
+from prawnmap.image_coordinate_map import ImageCoordinateMap
 import os
 import os.path
 import math

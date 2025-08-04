@@ -5,9 +5,9 @@ pre-stitched means non-overlapping
 They can be either a single large input image or the bottom level tiles
 '''
 
-from pr0nmap.map import ImageMapSource, TileMapSource
-from pr0nmap.gmap import GMap
-from pr0nmap.groupxiv import GroupXIV
+from prawnmap.map import ImageMapSource, TileMapSource
+from prawnmap.gmap import GMap
+from prawnmap.groupxiv import GroupXIV
 
 import argparse
 import multiprocessing
@@ -15,7 +15,7 @@ import os
 import re
 
 
-# Keep pr0nmap/main.py and sipr0n/img2doku.py in sync
+# Keep prawnmap/main.py and siprawn/img2doku.py in sync
 def parse_image_name(fn):
     fnbase = os.path.basename(fn)
     m = re.match(r'([a-z0-9\-]+)_([a-z0-9\-]+)_(.*).jpg', fnbase)
@@ -74,9 +74,9 @@ if __name__ == "__main__":
             source = TileMapSource(image_in, threads=args.threads)
         else:
             print(('Working on single input image %s' % image_in))
-            # Do auto-magic renaming for standard named die on sipr0n
+            # Do auto-magic renaming for standard named die on siprawn
             if not out_dir:
-                # keep in sync with sipr0n/simapper.py
+                # keep in sync with siprawn/simapper.py
                 sparts = image_in.split("/")
                 if len(sparts) > 1 and sparts[-2] == "single":
                     _fnbase, _vendor, _chipid, flavor = parse_image_name(
@@ -86,7 +86,7 @@ if __name__ == "__main__":
                     # single/blah.jpg
                     out_dir = os.path.join(
                         os.path.dirname(os.path.dirname(image_in)), flavor)
-                    print(('Auto-naming output file for sipr0n: %s' % out_dir))
+                    print(('Auto-naming output file for siprawn: %s' % out_dir))
             source = ImageMapSource(image_in, threads=args.threads)
 
         if not out_dir:

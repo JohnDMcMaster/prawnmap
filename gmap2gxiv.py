@@ -4,7 +4,7 @@ import os
 import glob
 import re
 from shutil import copyfile
-from pr0nmap.groupxiv import write_js
+from prawnmap.groupxiv import write_js
 
 
 def parse_html(fn):

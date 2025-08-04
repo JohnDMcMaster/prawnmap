@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from pr0nmap.map_util import *
+from prawnmap.map_util import *
 import argparse
 
 if __name__ == "__main__":

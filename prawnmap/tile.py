@@ -1,12 +1,12 @@
 #!/usr/bin/python
 '''
-pr0ntile: IC die image stitching and tile generation
+prawntile: IC die image stitching and tile generation
 Copyright 2012 John McMaster <JohnDMcMaster@gmail.com>
 Licensed under a 2 clause BSD license, see COPYING for details
 '''
 
-from pr0nmap import pimage
-from pr0nmap import tile_name
+from prawnmap import pimage
+from prawnmap import tile_name
 
 import sys
 import os.path
@@ -446,7 +446,7 @@ class Tiler(object):
         if self.verbose:
             print('Shrinking the world for future rounds')
 
-    def get_tle_name_pr0nts(self, root_dir, row, col, im_ext):
+    def get_tle_name_prawnts(self, root_dir, row, col, im_ext):
         return os.path.join(root_dir, "y%03u_x%03u%s" % (row, col, im_ext))
 
     def copy_max_dir(self, dst_level):
@@ -461,7 +461,7 @@ class Tiler(object):
             fnref = None
             for x in range(cols):
                 for y in range(rows):
-                    src_fn = self.get_tle_name_pr0nts(self.src_dir, y, x,
+                    src_fn = self.get_tle_name_prawnts(self.src_dir, y, x,
                                                       self.im_ext)
                     dst_fn = self.get_tile_name(self.dst_basedir, dst_level, y,
                                                 x, self.im_ext)

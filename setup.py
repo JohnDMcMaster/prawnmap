@@ -25,25 +25,25 @@ scripts_dist = []
 for script in scripts:
     # Make script names more executable like
     if script == "main.py":
-        dst = 'build/pr0nmap'
+        dst = 'build/prawnmap'
     else:
-        dst = 'build/pr0nmap-' + script.replace('.py', '').replace('_', '-')
+        dst = 'build/prawnmap-' + script.replace('.py', '').replace('_', '-')
     shutil.copy(script, dst)
     scripts_dist.append(dst)
 
 setup(
-    name="pr0nmap",
+    name="prawnmap",
     version="2.0.0",
     author="John McMaster",
     author_email='JohnDMcMaster@gmail.com',
-    description=("siliconpr0n.org map generator."),
+    description=("siliconprawn.org map generator."),
     license="BSD",
     keywords="leaflet",
-    url='https://github.com/JohnDMcMaster/pr0nmap',
-    packages=['pr0nmap'],
+    url='https://github.com/JohnDMcMaster/prawnmap',
+    packages=['prawnmap'],
     scripts=scripts_dist,
     install_requires=[],
-    long_description="pr0nmap go vroom",
+    long_description="prawnmap go vroom",
     classifiers=[
         "License :: OSI Approved :: BSD License",
     ],

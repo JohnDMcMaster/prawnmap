@@ -1,7 +1,7 @@
-# pr0nmap
+# prawnmap
 
 Creates a web page that allows the user to zoom and pan on a very high resolution image.
-Intended to help users view high resolution die photos on siliconpr0n.org
+Intended to help users view high resolution die photos on siliconprawn.org
 
 It can ingest either large .jpg files or a directory containing tiles
 
@@ -16,7 +16,7 @@ sudo apt-get install python-pil
 Get a .jpg. If you need inspiration:
 
 ```
-wget https://siliconpr0n.org/map/macom/maam-011167/single/macom_maam-011167_mz_mit20x.jpg
+wget https://siliconprawn.org/map/macom/maam-011167/single/macom_maam-011167_mz_mit20x.jpg
 ```
 
 Then run main.py on it:
@@ -44,7 +44,7 @@ This works but is hacky. TODO: add instructions
 ## GroupXIV support
 This is the default rendering engine.
 
-Library is more or less hard coded to use siliconpr0n.org.
+Library is more or less hard coded to use siliconprawn.org.
 However, if you are deploying your own large site or need offline use this can be fixed.
 
 For setting up your own instance see https://github.com/whitequark/groupXIV
@@ -62,7 +62,7 @@ TODO: consider removing entirely
 
 ## File name magic for directory "single"
 
-Since this tool was primarily intended for siliconpr0n.org use, it has a magic rule that can match if point it to a file in a directory named "single". Images are expected to be named $vendor_$chipname_$stuff and this simplifies the output name to $stuff. 
+Since this tool was primarily intended for siliconprawn.org use, it has a magic rule that can match if point it to a file in a directory named "single". Images are expected to be named $vendor_$chipname_$stuff and this simplifies the output name to $stuff. 
 
 # Version history
 

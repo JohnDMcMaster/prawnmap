@@ -1,5 +1,5 @@
-from pr0nmap import gmap
-from pr0nmap import groupxiv
+from prawnmap import gmap
+from prawnmap import groupxiv
 
 
 def mk_get_tile_name(which):

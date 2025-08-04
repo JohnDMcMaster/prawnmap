@@ -1,5 +1,5 @@
-from pr0nmap.image_coordinate_map import ImageCoordinateMap
-from pr0nmap.pimage import PImage
+from prawnmap.image_coordinate_map import ImageCoordinateMap
+from prawnmap.pimage import PImage
 import os
 import shutil
 
