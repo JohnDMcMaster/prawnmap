@@ -7,7 +7,7 @@ They can be either a single large input image or the bottom level tiles
 
 from prawnmap.map import ImageMapSource, TileMapSource
 from prawnmap.gmap import GMap
-from prawnmap.groupxiv import GroupXIV
+from prawnmap.groupxiv import GroupXIV, DEFAULT_URL_BASE
 
 import argparse
 import multiprocessing
@@ -64,6 +64,13 @@ if __name__ == "__main__":
                         choices=['gmap', 'groupxiv'],
                         default='groupxiv',
                         help='')
+    parser.add_argument(
+        '--url-base',
+        default=os.getenv("PRAWNMAP_URL_BASE"),
+        help=
+        'groupxiv: where groupxiv.js / groupxiv.css are served from. Use a site '
+        'relative path (ex: /lib/groupXIV/stable) if hosting them yourself. '
+        'Default: $PRAWNMAP_URL_BASE else ' + DEFAULT_URL_BASE)
     args = parser.parse_args()
 
     for image_in in args.images_in:
@@ -99,7 +106,9 @@ if __name__ == "__main__":
         if args.target == 'gmap':
             m = GMap(source, copyright_=args.copyright)
         else:
-            m = GroupXIV(source, copyright_=args.copyright)
+            m = GroupXIV(source,
+                         copyright_=args.copyright,
+                         url_base=args.url_base)
 
         m.set_title(title)
         m.set_js_only(args.js_only)

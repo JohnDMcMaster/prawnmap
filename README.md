@@ -44,8 +44,16 @@ This works but is hacky. TODO: add instructions
 ## GroupXIV support
 This is the default rendering engine.
 
-Library is more or less hard coded to use siliconprawn.org.
-However, if you are deploying your own large site or need offline use this can be fixed.
+Generated pages load groupxiv.js / groupxiv.css from siliconprawn.org by default.
+If you are deploying your own large site or need offline use, point them somewhere
+else with `--url-base` (or the `PRAWNMAP_URL_BASE` environment variable):
+
+```
+# serving the assets yourself: site relative, so the output isn't tied to a domain
+./main.py --url-base /lib/groupXIV/stable macom_maam-011167_mz_mit20x.jpg
+# offline
+./main.py --url-base ../../groupXIV macom_maam-011167_mz_mit20x.jpg
+```
 
 For setting up your own instance see https://github.com/whitequark/groupXIV
 
